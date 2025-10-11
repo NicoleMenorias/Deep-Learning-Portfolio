@@ -1,4 +1,4 @@
-# 🧪 Laboratory Gallery
+# 🧪 Laboratory Experiments
 
 <div class="cover">
   <div class="orb"></div>
@@ -6,7 +6,7 @@
 
   <img src="../assets/logo.png" alt="Logo" class="cover-logo"/>
   <h1>Laboratory Experiments</h1>
-  <p>Hands-on coding sessions and applied data experiments. Select a laboratory below to explore its notebook.</p>
+  <p>Hands-on coding sessions and applied data experiments. Each lab is an interactive notebook — click to open and explore.</p>
 
   <div class="tab-header">
     <a class="tab" href="../Lectures/intro.html">📘 Lectures</a>
@@ -14,32 +14,43 @@
     <a class="tab" href="../Projects/intro.html">💡 Projects</a>
   </div>
 
+  <!-- ✅ Each notebook inside its own gallery block -->
   <div class="gallery">
     <a class="gallery-card" href="../Laboratories/laboratory1.html">
       <h3>Laboratory 1</h3>
       <p>Exploring Data Fundamentals</p>
     </a>
+  </div>
 
+  <div class="gallery">
     <a class="gallery-card" href="../Laboratories/laboratory2.html">
       <h3>Laboratory 2</h3>
       <p>Signal Processing Basics</p>
     </a>
+  </div>
 
+  <div class="gallery">
     <a class="gallery-card" href="../Laboratories/laboratory3.html">
       <h3>Laboratory 3</h3>
       <p>Feature Extraction & Analysis</p>
     </a>
+  </div>
 
+  <div class="gallery">
     <a class="gallery-card" href="../Laboratories/laboratory4.html">
       <h3>Laboratory 4</h3>
       <p>Model Training & Evaluation</p>
     </a>
+  </div>
 
+  <div class="gallery">
     <a class="gallery-card" href="../Laboratories/laboratory5.html">
       <h3>Laboratory 5</h3>
       <p>Model Optimization & Validation</p>
     </a>
+  </div>
 
+  <div class="gallery">
     <a class="gallery-card" href="../Laboratories/laboratory6.html">
       <h3>Laboratory 6</h3>
       <p>Final Integration Project</p>
@@ -126,30 +137,25 @@
   transform: translateY(-3px);
 }
 
-/* Gallery Section */
+/* ✅ Gallery per notebook */
 .gallery {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 25px;
-  margin-top: 3rem;
-  max-width: 900px;
+  margin-top: 1.5rem;
+  width: 100%;
 }
 
 .gallery-card {
-  position: relative;
-  width: 250px;
-  height: 160px;
+  width: 260px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 16px;
-  text-align: left;
   padding: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(8px);
   text-decoration: none;
   color: #fff;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  text-align: left;
 }
 
 .gallery-card:hover {
