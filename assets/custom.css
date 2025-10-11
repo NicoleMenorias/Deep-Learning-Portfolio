@@ -1,35 +1,130 @@
+/* ============================================================
+   GLOBAL LAYOUT & RESET
+============================================================ */
+
 /* Hide sidebar and table of contents */
 .bd-sidebar-primary, .bd-toc {
   display: none !important;
 }
 
-/* Page layout */
+/* Full-width layout */
+.bd-main .bd-content {
+  max-width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+}
+
+/* Background and text */
 body {
-  background: linear-gradient(135deg, #141e30, #243b55);
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #f5f5f5;
   font-family: 'Inter', sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
-/* Tab navigation bar */
+/* ============================================================
+   COVER SECTION
+============================================================ */
+
+.cover {
+  text-align: center;
+  padding: 8rem 2rem 6rem;
+  background: linear-gradient(135deg, #00e6ff, #ff00d4);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cover::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 60%);
+  animation: rotateCover 15s linear infinite;
+  z-index: 0;
+}
+
+@keyframes rotateCover {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.cover-logo {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.cover-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: 1.2rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cover-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.cover-button {
+  background: #fff;
+  color: #111;
+  padding: 0.9rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+  position: relative;
+  z-index: 1;
+}
+
+.cover-button:hover {
+  transform: translateY(-4px);
+  background: linear-gradient(90deg, #00e6ff, #ff00d4);
+  color: #fff;
+}
+
+/* ============================================================
+   TAB NAVIGATION BAR
+============================================================ */
+
 .tab-header {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  margin: 2rem 0;
+  margin: 3rem 0 2rem;
   background: rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 1rem 0.5rem;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  backdrop-filter: blur(6px);
 }
 
 .tab {
   cursor: pointer;
-  padding: 0.8rem 1.5rem;
-  border-radius: 10px;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
   font-weight: 600;
   transition: all 0.3s ease;
+  color: #ddd;
 }
 
 .tab.active, .tab:hover {
@@ -39,37 +134,71 @@ body {
   transform: translateY(-3px);
 }
 
-/* Tab content sections */
+/* ============================================================
+   TAB CONTENT & PORTFOLIO CARDS
+============================================================ */
+
 .tab-content {
   display: none;
   animation: fadeIn 0.4s ease-in-out;
   text-align: center;
+  padding: 2rem 0;
 }
 
 .tab-content.active {
   display: block;
 }
 
-/* Portfolio cards inside tabs */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
 .portfolio-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 2rem;
-  margin: 1rem;
-  width: 250px;
-  display: inline-block;
-  transition: 0.3s;
+  width: 280px;
+  transition: all 0.3s ease;
   box-shadow: 0 0 20px rgba(0,0,0,0.3);
   cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio-card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(135deg, #00e6ff33, #ff00d433);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.portfolio-card:hover::before {
+  opacity: 1;
+}
+
+.portfolio-card h3, .portfolio-card p {
+  position: relative;
+  z-index: 1;
 }
 
 .portfolio-card:hover {
   transform: translateY(-8px) scale(1.05);
-  background: linear-gradient(135deg, #00e6ff33, #ff00d433);
 }
 
-/* Animation */
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(10px);}
-  to {opacity: 1; transform: translateY(0);}
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
