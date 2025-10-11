@@ -5,7 +5,6 @@ parts:
   - caption: Lectures
     chapters:
       - file: Lectures/lecture1
-
   - caption: Laboratories
     chapters:
       - file: Laboratories/laboratory1
@@ -14,8 +13,5 @@ parts:
       - file: Laboratories/laboratory4
       - file: Laboratories/laboratory5
       - file: Laboratories/laboratory6
-
-
   - caption: Projects
     chapters:
-      - file: Projects/project1
