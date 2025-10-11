@@ -1,4 +1,4 @@
-// --- Animated Tabs with Gradient Motion ---
+// --- Animated Tabs with Aligned Underline and Card Reveal ---
 document.addEventListener("DOMContentLoaded", () => {
   const tabButtons = document.querySelectorAll(".tab-btn");
   const tabContents = document.querySelectorAll(".tab-content");
@@ -16,11 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
     indicator.style.transform = `translateX(${rect.left - parentRect.left}px)`;
   };
 
-  // Initialize
   const active = document.querySelector(".tab-btn.active");
   if (active) moveIndicator(active);
 
-  // Tab click
+  // Tab switching logic
   tabButtons.forEach((btn) => {
     btn.addEventListener("click", () => {
       if (btn.classList.contains("active")) return;
@@ -36,16 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Animate cards on scroll
+  // Card reveal animation on scroll
   const cards = document.querySelectorAll(".card");
   const revealCards = () => {
-    const triggerBottom = window.innerHeight * 0.85;
+    const triggerBottom = window.innerHeight * 0.9;
     cards.forEach(card => {
       const top = card.getBoundingClientRect().top;
       if (top < triggerBottom) {
         card.classList.add("visible");
-      } else {
-        card.classList.remove("visible");
       }
     });
   };
