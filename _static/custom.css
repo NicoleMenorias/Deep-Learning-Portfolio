@@ -1,65 +1,33 @@
-/* ==========================================================
-   BLACK-WHITE GRADIENT PORTFOLIO THEME – FINAL VERSION
-   ========================================================== */
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: radial-gradient(circle at top, #0b0b0b 0%, #1a1a1a 50%, #2a2a2a 100%);
-  color: #f2f2f2;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-/* --- Layout Container --- */
-.intro-container {
+/* --- INTRO TABS UI --- */
+.intro-tabs {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  width: 100%;
-  text-align: center;
-  padding: 5rem 2rem 4rem 2rem;
+  padding: 3rem 2rem;
 }
 
-/* --- Header --- */
-.intro-header h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  background: linear-gradient(90deg, #ffffff, #cccccc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0.3rem;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: #bdbdbd;
-  margin-bottom: 2.5rem;
-}
-
-/* --- Tabs --- */
+/* --- Tab Buttons --- */
 .tab-buttons {
   position: relative;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding-bottom: 0.6rem;
   margin-bottom: 3rem;
-  width: 100%;
-  max-width: 900px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 0.6rem;
 }
 
 .tab-btn {
   background: transparent;
   border: none;
-  color: #d1d1d1;
-  font-weight: 500;
-  font-size: 1.1rem;
+  color: #e0e0e0;
+  padding: 0.7rem 1rem;
   cursor: pointer;
-  padding: 0.5rem 0.2rem;
-  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .tab-btn:hover {
@@ -69,80 +37,26 @@ body {
 
 .tab-btn.active {
   color: #ffffff;
-  font-weight: 600;
 }
 
 /* --- Underline Indicator --- */
 .tab-indicator {
   position: absolute;
   bottom: 0;
+  left: 0;
   height: 3px;
-  background: linear-gradient(90deg, #ffffff, #bdbdbd, #ffffff);
-  border-radius: 3px;
-  transition: transform 0.3s ease, width 0.3s ease;
-  background-size: 200% 100%;
-  animation: shimmer 3s infinite linear;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  border-radius: 2px;
+  transition: transform 0.35s ease, width 0.35s ease;
 }
 
-@keyframes shimmer {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
-}
-
-/* --- Cards --- */
-.card {
-  background: rgba(255,255,255,0.07);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 16px;
-  padding: 1.8rem 1.5rem;
-  color: #f2f2f2;
-  text-align: left;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
-  height: 100%;
-}
-
-.card h3 {
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin-bottom: 0.8rem;
-}
-
-.card p {
-  color: #e0e0e0;
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-  background: rgba(255,255,255,0.12);
-  box-shadow: 0 20px 45px rgba(255,255,255,0.15);
-}
-
-/* --- Card Grid --- */
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.8rem;
-  justify-content: center;
-  align-items: stretch;
-  width: 100%;
-  max-width: 1000px;
-  margin-top: 1.5rem;
-}
-
-.card-link {
-  text-decoration: none;
-}
-
-/* --- Animations --- */
+/* --- Tab Transitions --- */
 .tab-content {
   display: none;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(15px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: center;
 }
 
 .tab-content.active {
@@ -154,53 +68,97 @@ body {
   transform: translateY(0);
 }
 
-/* --- Intro Card Glow --- */
+/* --- Card Reveal Animation --- */
+.card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Intro Card Style --- */
 .intro-card {
-  animation: glow 5s ease-in-out infinite alternate;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 2rem;
+  max-width: 700px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-@keyframes glow {
-  0%,100% { box-shadow: 0 0 10px rgba(255,255,255,0.05); }
-  50% { box-shadow: 0 0 25px rgba(255,255,255,0.2); }
+.intro-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
-/* --- Hide Default Book UI --- */
+.intro-card h2, .card h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* --- Optional: Gradient shimmer for underline --- */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.tab-indicator {
+  background: linear-gradient(90deg, #8e2de2, #4a00e0, #8e2de2);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
+}
+
+/* --- GLOBAL FULL-WIDTH MODE (NO SIDEBAR) --- */
+
+/* Hide left sidebar, TOC, and related wrappers */
 .bd-sidebar,
 .bd-toc,
-.bd-header,
 .bd-sidebar-primary,
-.bd-sidebar-secondary,
-.theme-switch-button,
-.btn.theme-switch-button,
+.bd-sidebar-secondary {
+  display: none !important;
+}
+
+/* Make the main content span full width */
+.bd-main {
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Expand article area fully */
+.bd-content {
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  max-width: 100%;
+  width: 100%;
+}
+
+/* Hide "next"/"previous" navigation buttons */
 .prev-next-area {
   display: none !important;
 }
 
-.bd-main,
-.bd-content {
-  margin: 0 !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  padding: 0;
+/* Adjust header (optional) */
+.bd-header {
+  background: none;
+  box-shadow: none;
+  border-bottom: none;
 }
 
-.bd-content article {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Hide top Jupyter Book branding and navbar */
+.header-article,
+.navbar-brand,
+.navbar-header-items__start {
+  display: none !important;
 }
 
-/* --- Responsive --- */
-@media (max-width: 768px) {
-  .tab-buttons {
-    gap: 1.2rem;
-  }
-  .intro-header h1 {
-    font-size: 2.2rem;
-  }
-  .card-grid {
-    grid-template-columns: 1fr;
-    max-width: 90%;
-  }
-}
