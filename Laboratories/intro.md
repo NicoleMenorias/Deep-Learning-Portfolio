@@ -8,8 +8,6 @@ title: "My Portfolio Gallery"
   <img src="assets/logo.png" alt="Logo" width="120">
 </p>
 
-## Laboratory Experiments
-
 Hands-on coding sessions and applied data experiments.  
 Click a laboratory card below to explore each interactive notebook.
 
@@ -50,6 +48,12 @@ Click a laboratory card below to explore each interactive notebook.
 ---
 
 <style>
+/* === Background Gradient for Coding Eyes === */
+body, .bd-article-container {
+  background: radial-gradient(circle at top left, #0b132b 0%, #1c2541 50%, #1b2a49 100%) !important;
+  color: #e8f1f2 !important;
+}
+
 /* === Layout width control === */
 .bd-article-container {
   max-width: 95% !important;
@@ -66,11 +70,11 @@ Click a laboratory card below to explore each interactive notebook.
   justify-content: center;
 }
 
-/* === Glassmorphism Cards === */
+/* === Glassmorphism Cards with Gradient Glow === */
 .gallery-card {
   display: block;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 1.5rem;
   padding: 2.5rem;
   text-decoration: none;
@@ -79,7 +83,7 @@ Click a laboratory card below to explore each interactive notebook.
   backdrop-filter: blur(16px) saturate(150%);
   -webkit-backdrop-filter: blur(16px) saturate(150%);
   transition: all 0.35s ease;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.05);
 }
 
 /* === Text inside cards === */
@@ -87,29 +91,35 @@ Click a laboratory card below to explore each interactive notebook.
   font-size: 1.4rem;
   margin-bottom: 0.6rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #a5f3fc;
   letter-spacing: 0.3px;
 }
 
 .gallery-card p {
   font-size: 0.95rem;
-  color: #cccccc;
+  color: #b0bec5;
 }
 
-/* === Hover Effects === */
+/* === Hover Effects (Neon Glow) === */
 .gallery-card:hover {
   transform: translateY(-10px) scale(1.03);
-  border-color: rgba(255, 255, 255, 0.35);
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 40px rgba(255, 255, 255, 0.15);
+  border-color: rgba(0, 255, 255, 0.45);
+  background: rgba(0, 255, 255, 0.12);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
 }
 
 .gallery-card:hover h3 {
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+  color: #e0ffff;
+  text-shadow: 0 0 15px rgba(0, 255, 255, 0.9);
 }
 
 .gallery-card:hover p {
-  color: #e0e0e0;
+  color: #e0f7fa;
+}
+
+/* === Subtle Header Glow === */
+h1, h2, h3 {
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.2);
 }
 
 /* === Responsive === */
