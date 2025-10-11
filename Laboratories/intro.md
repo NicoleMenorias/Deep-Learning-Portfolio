@@ -1,186 +1,99 @@
+---
+title: "My Portfolio Gallery"
+---
+
 # 🧪 Laboratory Experiments
 
-<div class="cover">
-  <div class="orb"></div>
-  <div class="orb"></div>
+<p align="center">
+  <img src="assets/logo.png" alt="Logo" width="120">
+</p>
 
-  <img src="../assets/logo.png" alt="Logo" class="cover-logo"/>
-  <h1>Laboratory Experiments</h1>
-  <p>Hands-on coding sessions and applied data experiments.<br>
-  Click a laboratory card below to explore each interactive notebook.</p>
+## Laboratory Experiments
 
-  <div class="gallery-grid">
-    <a class="gallery-card" href="../Laboratories/laboratory1.html">
-      <h3>Laboratory 1</h3>
-      <p>Exploring Data Fundamentals</p>
-    </a>
-    <a class="gallery-card" href="../Laboratories/laboratory2.html">
-      <h3>Laboratory 2</h3>
-      <p>Signal Processing Basics</p>
-    </a>
-    <a class="gallery-card" href="../Laboratories/laboratory3.html">
-      <h3>Laboratory 3</h3>
-      <p>Feature Extraction & Analysis</p>
-    </a>
-    <a class="gallery-card" href="../Laboratories/laboratory4.html">
-      <h3>Laboratory 4</h3>
-      <p>Model Training & Evaluation</p>
-    </a>
-    <a class="gallery-card" href="../Laboratories/laboratory5.html">
-      <h3>Laboratory 5</h3>
-      <p>Model Optimization & Validation</p>
-    </a>
-    <a class="gallery-card" href="../Laboratories/laboratory6.html">
-      <h3>Laboratory 6</h3>
-      <p>Final Integration Project</p>
-    </a>
+Hands-on coding sessions and applied data experiments.  
+Click a laboratory card below to explore each interactive notebook.
+
+<div class="gallery-section">
+
+  <div class="gallery-card">
+    <h3>Laboratory 1</h3>
+    <p>Exploring Data Fundamentals</p>
   </div>
+
+  <div class="gallery-card">
+    <h3>Laboratory 2</h3>
+    <p>Data Visualization and Insights</p>
+  </div>
+
+  <div class="gallery-card">
+    <h3>Laboratory 3</h3>
+    <p>Regression Analysis and Forecasting</p>
+  </div>
+
+  <div class="gallery-card">
+    <h3>Laboratory 4</h3>
+    <p>Time Series Modeling</p>
+  </div>
+
+  <div class="gallery-card">
+    <h3>Laboratory 5</h3>
+    <p>Deep Learning Fundamentals</p>
+  </div>
+
+  <div class="gallery-card">
+    <h3>Laboratory 6</h3>
+    <p>Model Evaluation and Deployment</p>
+  </div>
+
 </div>
 
+---
+
 <style>
-/* === Main Content Alignment === */
-.bd-content,
-.bd-main .bd-content,
+/* === Make Main Content Full Width === */
 .bd-article-container {
-  max-width: 1500px !important;     /* Slightly wider container */
-  margin: 0 auto !important;
-  padding-left: 4rem !important;    /* More breathing room at the sides */
-  padding-right: 4rem !important;
+  max-width: 95% !important; /* widen overall content */
+  margin: 0 auto !important; /* center it */
+  padding: 0 2rem !important; /* add breathing space on the sides */
 }
 
-/* === Cover Layout === */
-.cover {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(145deg, #0d0d0d, #1b1b1b);
-  color: #f5f5f5;
-  font-family: 'Poppins', sans-serif;
-  padding: 3rem 0;
-}
-
-/* === Floating Logo === */
-.cover-logo {
-  width: 120px;
-  margin-bottom: 1.2rem;
-  animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0 0 12px rgba(255,255,255,0.25));
-}
-
-/* === Ambient Orbs === */
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.2;
-  animation: pulse 10s infinite alternate;
-}
-
-.orb:nth-child(1) {
-  width: 400px;
-  height: 400px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(200,200,200,0.08));
-  top: -60px;
-  left: -120px;
-}
-
-.orb:nth-child(2) {
-  width: 500px;
-  height: 500px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(150,150,150,0.05));
-  bottom: -100px;
-  right: -150px;
-}
-
-/* === Grid Layout === */
-.gallery-grid {
+/* === Gallery Section === */
+.gallery-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 3rem; /* Increased space between cards */
-  margin-top: 3.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* wider cards */
+  gap: 2rem; /* spacing between cards */
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+/* === Gallery Card Styling === */
+.gallery-card {
+  background: rgba(30, 30, 30, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.2rem;
+  padding: 2.5rem;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
   width: 100%;
-  padding: 0 3rem; /* more space on edges */
   box-sizing: border-box;
 }
 
-/* === Card Style === */
-.gallery-card {
-  display: block;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 18px;
-  padding: 2rem 1.5rem;
-  text-decoration: none;
-  color: #f1f1f1;
-  backdrop-filter: blur(15px) saturate(140%);
-  transition: all 0.4s ease;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  overflow: hidden;
-}
-
-.gallery-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  color: #ffffff;
-  letter-spacing: 0.3px;
-}
-
-.gallery-card p {
-  font-size: 0.95rem;
-  color: #cccccc;
-}
-
-/* === Hover Effects === */
 .gallery-card:hover {
-  transform: translateY(-10px) scale(1.03);
-  border-color: rgba(255, 255, 255, 0.35);
-  background: rgba(255,255,255,0.12);
-  box-shadow: 0 8px 40px rgba(255,255,255,0.08);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-.gallery-card:hover h3 {
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(255,255,255,0.8);
-}
-
-.gallery-card:hover p {
-  color: #e0e0e0;
-}
-
-/* === Responsive Design === */
-@media (max-width: 1200px) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, minmax(260px, 1fr));
-    gap: 2.5rem;
+/* === Responsive Handling === */
+@media (max-width: 768px) {
+  .bd-article-container {
+    max-width: 100% !important;
+    padding: 0 1rem !important;
   }
-}
-
-@media (max-width: 992px) {
-  .gallery-grid {
-    grid-template-columns: repeat(2, minmax(240px, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery-grid {
+  .gallery-section {
     grid-template-columns: 1fr;
   }
-}
-
-/* === Animations === */
-@keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-}
-
-@keyframes pulse {
-  from { transform: scale(1); opacity: 0.25; }
-  to { transform: scale(1.15); opacity: 0.4; }
 }
 </style>
