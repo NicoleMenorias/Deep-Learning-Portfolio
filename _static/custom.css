@@ -1,133 +1,119 @@
-
-/* Import Poppins font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #0a0f2c, #1b256b, #2a3cb0);
-  color: #f5f7ff;
-  margin: 0;
-  overflow-x: hidden;
-}
-
-/* --- HERO SECTION --- */
-.hero {
-  text-align: center;
-  padding: 8rem 2rem 6rem 2rem;
-  background: linear-gradient(120deg, #4a00e0, #8e2de2);
-  color: white;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 1.5s ease-in-out;
-}
-
-.hero-content h1 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.hero-content h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  opacity: 0.9;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-  opacity: 0.95;
-}
-
-.hero-buttons {
+/* --- INTRO TABS UI --- */
+.intro-tabs {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+}
+
+/* --- Tab Buttons --- */
+.tab-buttons {
+  position: relative;
+  display: inline-flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 0.6rem;
 }
 
-.hero-btn {
-  background: white;
-  color: #4a00e0;
-  padding: 0.8rem 1.5rem;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-.hero-btn:hover {
-  background: #4a00e0;
-  color: white;
-  transform: scale(1.05);
-}
-
-.hero-btn.outline {
+.tab-btn {
   background: transparent;
-  border: 2px solid white;
-  color: white;
+  border: none;
+  color: #e0e0e0;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.hero-btn.outline:hover {
-  background: white;
-  color: #4a00e0;
+.tab-btn:hover {
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
-/* --- DASHBOARD SECTION --- */
-.dashboard {
+.tab-btn.active {
+  color: #ffffff;
+}
+
+/* --- Underline Indicator --- */
+.tab-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  border-radius: 2px;
+  transition: transform 0.35s ease, width 0.35s ease;
+}
+
+/* --- Tab Transitions --- */
+.tab-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
   text-align: center;
-  padding: 4rem 2rem;
 }
 
-.dashboard h3 {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
+.tab-content.active {
+  display: block;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 2rem;
-  justify-items: center;
-  padding: 0 2rem;
+.tab-content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* --- Card Reveal Animation --- */
 .card {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 20px;
-  max-width: 300px;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
-/* --- FOOTER --- */
-.footer {
-  text-align: center;
+/* --- Intro Card Style --- */
+.intro-card {
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.08);
+  border-radius: 20px;
   padding: 2rem;
-  font-size: 0.9rem;
-  opacity: 0.8;
+  max-width: 700px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-/* --- ANIMATIONS --- */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+.intro-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
 }
 
-/* Make tables of contents area blend in */
-div#jb-print-docs,
-div.section > p {
-  color: #f0f3ff;
+.intro-card h2, .card h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+/* --- Optional: Gradient shimmer for underline --- */
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.tab-indicator {
+  background: linear-gradient(90deg, #8e2de2, #4a00e0, #8e2de2);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite linear;
 }

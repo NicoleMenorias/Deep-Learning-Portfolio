@@ -1,29 +1,54 @@
+// --- Animated Tab Switching with Smooth Motion ---
 document.addEventListener("DOMContentLoaded", () => {
-  const cards = document.querySelectorAll(".card");
-  const hero = document.querySelector(".hero");
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".tab-content");
 
-  // Scroll animation for cards
+  // Create underline indicator
+  const indicator = document.createElement("div");
+  indicator.className = "tab-indicator";
+  document.querySelector(".tab-buttons").appendChild(indicator);
+
+  // Move indicator under active button
+  const moveIndicator = (btn) => {
+    const rect = btn.getBoundingClientRect();
+    const parentRect = btn.parentElement.getBoundingClientRect();
+    indicator.style.width = rect.width + "px";
+    indicator.style.transform = `translateX(${rect.left - parentRect.left}px)`;
+  };
+
+  // Initialize on load
+  const active = document.querySelector(".tab-btn.active");
+  if (active) moveIndicator(active);
+
+  // Handle tab click
+  tabButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.classList.contains("active")) return;
+
+      tabButtons.forEach((b) => b.classList.remove("active"));
+      tabContents.forEach((c) => c.classList.remove("active", "fade-in"));
+
+      btn.classList.add("active");
+      moveIndicator(btn);
+
+      const target = document.getElementById(btn.dataset.tab);
+      target.classList.add("active", "fade-in");
+    });
+  });
+
+  // Animate cards on scroll
+  const cards = document.querySelectorAll(".card");
   const revealCards = () => {
-    const triggerBottom = window.innerHeight * 0.9;
+    const triggerBottom = window.innerHeight * 0.85;
     cards.forEach(card => {
       const top = card.getBoundingClientRect().top;
       if (top < triggerBottom) {
-        card.style.opacity = "1";
-        card.style.transform = "translateY(0)";
+        card.classList.add("visible");
       } else {
-        card.style.opacity = "0";
-        card.style.transform = "translateY(40px)";
+        card.classList.remove("visible");
       }
     });
   };
-
   window.addEventListener("scroll", revealCards);
   revealCards();
-
-  // Subtle pulse animation on hero background
-  let hue = 250;
-  setInterval(() => {
-    hue = (hue + 1) % 360;
-    hero.style.background = `linear-gradient(120deg, hsl(${hue}, 70%, 50%), hsl(${(hue+60)%360}, 70%, 60%))`;
-  }, 80);
 });
