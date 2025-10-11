@@ -38,7 +38,17 @@
 </div>
 
 <style>
-/* === General layout === */
+/* === Layout Width Alignment === */
+.bd-content,
+.bd-main .bd-content,
+.bd-article-container {
+  max-width: 1000px !important;    /* keeps content aligned with top navbar icons */
+  margin: 0 auto !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+/* === Cover Layout === */
 .cover {
   display: flex;
   flex-direction: column;
@@ -51,6 +61,9 @@
   background: linear-gradient(145deg, #0d0d0d, #1b1b1b);
   color: #f5f5f5;
   font-family: 'Poppins', sans-serif;
+  width: 100%;
+  max-width: 100vw;
+  padding: 2rem 0;
 }
 
 /* === Floating Logo === */
@@ -61,7 +74,7 @@
   filter: drop-shadow(0 0 12px rgba(255,255,255,0.25));
 }
 
-/* === Glow Orbs for Ambient Light === */
+/* === Ambient Glow Orbs === */
 .orb {
   position: absolute;
   border-radius: 50%;
@@ -86,17 +99,16 @@
   right: -150px;
 }
 
-/* === 3×2 Grid === */
+/* === Grid Layout (3x2) === */
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(240px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
-  width: 90%;
-  max-width: 1100px;
+  width: 100%;
 }
 
-/* === Glassmorphic Card === */
+/* === Card Styling (Glassmorphism) === */
 .gallery-card {
   display: block;
   background: rgba(255, 255, 255, 0.05);
@@ -123,7 +135,7 @@
   color: #cccccc;
 }
 
-/* === Hover Animation === */
+/* === Hover Effects === */
 .gallery-card:hover {
   transform: translateY(-10px) scale(1.03);
   border-color: rgba(255, 255, 255, 0.35);
@@ -131,7 +143,6 @@
   box-shadow: 0 8px 40px rgba(255,255,255,0.08);
 }
 
-/* === Highlight Effect on Hover === */
 .gallery-card:hover h3 {
   color: #ffffff;
   text-shadow: 0 0 8px rgba(255,255,255,0.7);
@@ -141,7 +152,7 @@
   color: #e0e0e0;
 }
 
-/* === Responsive === */
+/* === Responsive Adjustments === */
 @media (max-width: 992px) {
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(240px, 1fr));
@@ -154,7 +165,7 @@
   }
 }
 
-/* === Animations === */
+/* === Subtle Animations === */
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -163,22 +174,5 @@
 @keyframes pulse {
   from { transform: scale(1); opacity: 0.25; }
   to { transform: scale(1.15); opacity: 0.4; }
-}
-
-/* === FULL WIDTH FIX === */
-.bd-content,
-.bd-main .bd-content,
-.bd-article-container,
-.bd-page-width {
-  max-width: 100% !important;
-  width: 100% !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  margin: 0 !important;
-}
-
-/* Ensure the cover section fills horizontally */
-.cover {
-  width: 100vw;
 }
 </style>
