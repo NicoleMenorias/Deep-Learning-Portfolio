@@ -164,4 +164,21 @@
   from { transform: scale(1); opacity: 0.25; }
   to { transform: scale(1.15); opacity: 0.4; }
 }
+
+/* === FULL WIDTH FIX === */
+.bd-content,
+.bd-main .bd-content,
+.bd-article-container,
+.bd-page-width {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 !important;
+}
+
+/* Ensure the cover section fills horizontally */
+.cover {
+  width: 100vw;
+}
 </style>
