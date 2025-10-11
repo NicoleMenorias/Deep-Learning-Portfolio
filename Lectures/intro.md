@@ -1,74 +1,106 @@
-# 📘 Lecture Gallery
+# **📘 Lecture Gallery**
 
-<div class="section-intro">
+<p align="center">
+Explore my lecture notes and interactive notebooks.  
+Each lecture covers a key concept with explanations, code demos, and visualizations.
+</p>
 
-  <div class="glass-card">
-    <h1>Lectures Overview</h1>
-    <p>
-      Explore my lecture notes and interactive notebooks.
-      Each lecture covers a key concept with explanations, code demos, and visualizations.
-    </p>
-  </div>
+<div class="gallery-section">
 
-  <div class="gallery">
-    <div class="gallery-card" role="button" tabindex="0" onclick="location.href='lecture1.html'">
-      <h3>Lecture 1</h3>
-      <p>Foundations and Core Concepts</p>
-    </div>
-  </div>
+  <a class="gallery-card" href="../Lectures/lecture1.html">
+    <h3>Lecture 1</h3>
+    <p>Foundations and Core Concepts</p>
+  </a>
 
 </div>
 
 ---
 
 <style>
-body {
-  background-color: #121212;
-  color: #e0e0e0;
-  font-family: 'Inter', sans-serif;
+/* === Page Background (dark gray-black, matches theme) === */
+body, .bd-article-container {
+  background-color: #121212 !important;
+  color: #e0e0e0 !important;
 }
 
-.section-intro {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-  margin: 3rem 0;
+/* === Content Layout === */
+.bd-article-container {
+  max-width: 95% !important;
+  margin: 0 auto !important;
+  padding: 0 2.5rem !important;
 }
 
-.glass-card {
-  background: rgba(40, 40, 40, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 2rem 3rem;
-  text-align: center;
-  max-width: 800px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-}
-
-.gallery {
+/* === Gallery Grid (2 per row) === */
+.gallery-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  width: 100%;
-  max-width: 1000px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+  justify-content: center;
 }
 
+/* === Glassmorphism Cards === */
 .gallery-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 2rem;
+  display: block;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  text-decoration: none;
+  color: #f5f5f5;
   text-align: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
 }
 
+/* === Titles === */
+.gallery-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* === Descriptions === */
+.gallery-card p {
+  font-size: 0.95rem;
+  color: #cccccc;
+}
+
+/* === Hover Effects === */
 .gallery-card:hover {
-  transform: scale(1.03);
-  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-10px) scale(1.03);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.12);
 }
 
+.gallery-card:hover h3 {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+.gallery-card:hover p {
+  color: #f0f0f0;
+}
+
+/* === Headings Glow === */
+h1, h2, h3 {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* === Responsive Layout === */
+@media (max-width: 900px) {
+  .gallery-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .bd-article-container {
+    max-width: 100% !important;
+    padding: 0 1.5rem !important;
+  }
+}
 </style>
