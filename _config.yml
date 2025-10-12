@@ -44,5 +44,14 @@ sphinx:
 
 dependencies:
   - requirements.txt
-  - environment.yml
-  - conda-requirements.txt
+
+  # Prevent notebook execution during build
+execute:
+  execute_notebooks: "off"
+
+# Exclude folders that confuse Sphinx
+exclude_patterns:
+  - .venv/**
+  - _build/**
+  - .jupyter_cache/**
+
