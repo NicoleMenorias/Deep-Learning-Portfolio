@@ -374,7 +374,6 @@ document.write(`
   <p class="intro-text">
     Welcome to my Deep Learning Portfolio! Explore the sections for lecture, lab exercises, and projects — all crafted in Jupyter Notebook. To return here anytime, just click the Jupyter Book logo at the top-left. Arigatou gozaimasu!
   </p>
-  <!-- Improved Tabs: Separate containers for each tab, arranged horizontally with individual outlines -->
   <div class="tabs-wrapper">
     <div class="tab-container">
       <a class="tab" href="Lectures/intro.html">Lectures</a>
@@ -386,10 +385,8 @@ document.write(`
       <a class="tab" href="Projects/intro.html">Projects</a>
     </div>
   </div>
-  <!-- Magic Dust Layer -->
   <div class="magic-dust"></div>
 </div>
-<!-- Magical Cursor -->
 <div class="magic-cursor"></div>
 <style>
 /* === Font: Poppins Everywhere === */
@@ -399,7 +396,7 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container, h1, h2, p, .
 
 /* === Solid Dark Background Everywhere === */
 body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
-  background-color: #121212 !important; /* uniform deep dark gray-black */
+  background-color: #121212 !important;
   color: #e0e0e0 !important;
   cursor: none;
 }
@@ -411,7 +408,6 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
   padding: 0 2.5rem !important;
 }
 
-/* === Cover Section === */
 .cover {
   display: flex;
   flex-direction: column;
@@ -420,32 +416,29 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
   min-height: 90vh;
   text-align: center;
   position: relative;
-  /* overflow removed to allow glow to show */
 }
 
 /* === Subtitle ===*/
 .intro-text {
-  font-size: 0.70rem;        /* smaller font than subtitle */
-  color: #cccccc;            /* slightly lighter gray */
+  font-size: 0.70rem;
+  color: #cccccc;
   max-width: 600px;
   line-height: 1.5;
   margin-top: 0.8rem;
-  font-weight: 300;          /* light weight for subtlety */
+  font-weight: 300;
 }
 
-/* === Floating Logo (Perfectly Transparent, No Box, No Drop Shadow) === */
+/* === Floating Logo === */
 .cover-logo {
   width: auto;
   height: 150px;
   max-width: 90%;
   margin-bottom: 1.8rem;
   animation: float 3.5s ease-in-out infinite;
-  opacity: 1; /* visible but clean */
-  filter: none !important; /* remove drop-shadow or brightness adjustments */
-  background: transparent !important; /* enforce no background */
-  image-rendering: -webkit-optimize-contrast; /* keep edges clean on transparent pngs */
+  opacity: 1;
+  filter: none !important;
+  background: transparent !important;
   z-index: 10;
-  display: block;
 }
 
 /* === Glow Orbs === */
@@ -474,72 +467,57 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
   right: -150px;
 }
 
-/* === Typewriter Animation for H2 (Keyboard Typing Effect) === */
+/* === Typewriter === */
 .typewriter {
   font-size: 2.8rem;
   color: #ffffff;
   text-shadow: 0 0 15px rgba(255,255,255,0.25);
   margin-bottom: 1rem;
   font-weight: 700;
-  overflow: hidden; /* Required for typewriter effect */
-  border-right: .15em solid #ffffff; /* Blinking cursor */
-  white-space: nowrap; /* Keeps text on one line */
-  margin: 0 auto; /* Center alignment */
-  letter-spacing: .15em; /* Slight spacing for typing feel */
-  animation: 
-    typing 3.5s steps(40, end), /* Typing animation: 40 steps for ~40 characters */
-    blink-caret 0.75s step-end infinite; /* Blinking cursor */
+  overflow: hidden;
+  border-right: .15em solid #ffffff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: typing 3.5s steps(40, end),
+             blink-caret 0.75s step-end infinite;
 }
 
-/* Typewriter Keyframes */
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
-/* Blinking Cursor Keyframes */
-@keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #ffffff; }
-}
+@keyframes typing { from { width: 0; } to { width: 100%; } }
+@keyframes blink-caret { from, to { border-color: transparent; } 50% { border-color: #ffffff; } }
 
 .cover p {
   font-size: 1.1rem;
   color: #dddddd;
   max-width: 650px;
   line-height: 1.6;
-  font-weight: 400; /* Lighter weight for body text */
 }
 
-/* === Improved Tabs: Wrapper for horizontal layout === */
+/* === Tabs === */
 .tabs-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1.5rem; /* Spacing between individual tab containers */
+  gap: 1.5rem;
   margin-top: 3rem;
-  padding: 1rem; /* Light padding around the group */
+  padding: 1rem;
 }
 
-/* === Individual Tab Container (Separate for Each Tab: Darker Outline & Subtle 3D Effect) === */
 .tab-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(145deg, #1a1a1a, #121212); /* Subtle dark gradient for depth */
-  border-radius: 20px; /* Rounded corners for each container */
-  padding: 0.5rem; /* Inner padding around the tab */
-  border: 2px solid #2a2a2a; /* Darker outline (gray-black for cohesion with dark bg) */
-  box-shadow: 
-    0 2px 8px rgba(0, 0, 0, 0.4), /* Reduced outer dark shadow for subtlety */
-    inset 0 1px 0 rgba(255, 255, 255, 0.03), /* Very subtle inner highlight for 3D raised effect */
-    inset 0 -1px 2px rgba(0, 0, 0, 0.3); /* Reduced inner dark shadow for minimal inset 3D feel */
-  transition: all 0.35s ease; /* Smooth transitions */
-  min-width: 120px; /* Minimum width for consistency */
-  position: relative; /* For potential pseudo-elements if needed */
+  background: linear-gradient(145deg, #1a1a1a, #121212);
+  border-radius: 20px;
+  padding: 0.5rem;
+  border: 2px solid #2a2a2a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4),
+              inset 0 1px 0 rgba(255,255,255,0.03),
+              inset 0 -1px 2px rgba(0,0,0,0.3);
+  transition: all 0.35s ease;
+  min-width: 120px;
 }
 
-/* === Tabs Inside Containers === */
 .tab {
   text-decoration: none;
   cursor: pointer;
@@ -547,28 +525,23 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
   border-radius: 15px;
   font-weight: 600;
   transition: all 0.35s ease;
-  color: #ffffff; /* Changed to white as requested */
-  background-color: transparent; /* No background on tab itself */
-  border: none; /* Remove border from tab */
-  outline: none; /* No outline on tab */
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
   font-size: 1rem;
 }
 
 .tab:hover {
-  color: #ffffff; /* Already white, but kept for consistency; could adjust if needed */
-  text-shadow: 0 0 8px rgba(255,255,255,0.3); /* Subtle glow, less intense */
-  transform: scale(1.02); /* Minimal scale for cohesion */
+  text-shadow: 0 0 8px rgba(255,255,255,0.3);
+  transform: scale(1.02);
 }
 
-/* === Hover Effects on Individual Containers (Subtle 3D) === */
 .tab-container:hover {
-  border-color: #404040; /* Slightly lighter dark gray for subtle highlight (not white) */
-  box-shadow: 
-    0 4px 12px rgba(0, 0, 0, 0.5), /* Milder deeper outer shadow */
-    inset 0 1px 0 rgba(255, 255, 255, 0.05), /* Subtle inner highlight */
-    inset 0 -2px 4px rgba(0, 0, 0, 0.4); /* Milder deeper inner shadow for 3D pop */
-  transform: translateY(-2px); /* Reduced lift for less exaggeration */
-  background: linear-gradient(145deg, #202020, #121212); /* Darker gradient shift on hover */
+  border-color: #404040;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5),
+              inset 0 1px 0 rgba(255,255,255,0.05),
+              inset 0 -2px 4px rgba(0,0,0,0.4);
+  transform: translateY(-2px);
 }
 
 /* === Magic Dust === */
@@ -576,7 +549,6 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  overflow: visible;
 }
 
 .magic-dust::before,
@@ -591,21 +563,20 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
   animation: sparkle 3s ease-in-out infinite;
 }
 
-.magic-dust::before { top: 30%; left: 40%; animation-delay: 0s; }
+.magic-dust::before { top: 30%; left: 40%; }
 .magic-dust::after { top: 60%; left: 65%; animation-delay: 1.5s; }
 
-.cover:hover .magic-dust::before,
-.cover:hover .magic-dust::after {
-  opacity: 1;
-  animation: sparkle 2s ease-in-out infinite;
+@keyframes sparkle {
+  0% { transform: scale(0.8) translateY(0); opacity: 0; }
+  50% { transform: scale(1.3) translateY(-20px); opacity: 1; }
+  100% { transform: scale(0.8) translateY(0); opacity: 0; }
 }
 
-/* === Floating Animation === */
-@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
+/* === Float, Pulse === */
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px);} }
 @keyframes pulse { from { transform: scale(1); opacity: 0.3; } to { transform: scale(1.2); opacity: 0.5; } }
-@keyframes sparkle { 0% { transform: scale(0.8) translateY(0); opacity: 0; } 50% { transform: scale(1.3) translateY(-20px); opacity: 1; } 100% { transform: scale(0.8) translateY(0); opacity: 0; } }
 
-/* === Magical Cursor === */
+/* === Magic Cursor === */
 .magic-cursor {
   position: fixed;
   pointer-events: none;
@@ -614,11 +585,10 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
   border-radius: 50%;
   background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
   transform: translate(-50%, -50%);
-  transition: width 0.15s ease, height 0.15s ease, background 0.15s ease;
+  transition: width 0.15s ease, height 0.15s ease;
   z-index: 9999;
 }
 
-/* === Trailing Sparkles (Improved) === */
 .magic-sparkle {
   position: fixed;
   width: 4px;
@@ -632,100 +602,60 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* === Responsive (Tabs Stay Horizontal) === */
+/* === Responsive === */
 @media (max-width: 900px) {
   .bd-article-container { max-width: 100% !important; padding: 0 1.5rem !important; }
-  .tabs-wrapper { 
-    gap: 1rem; /* Reduce gap on mobile */
-    padding: 0.5rem; 
-  }
-  .tab-container { 
-    min-width: 100px; /* Smaller min-width on mobile */
-    padding: 0.3rem; 
-    border-width: 1.5px; /* Slightly thinner border on mobile */
-  }
-  .tab { 
-    padding: 0.8rem 1.2rem; /* Smaller padding for tabs on mobile */
-    font-size: 0.95rem; /* Slightly smaller font */
-  }
-  .cover-logo { height: 120px; max-width: 80%; }
-  .typewriter { 
-    font-size: 2rem; /* Responsive size for h2 */
-    letter-spacing: .1em; /* Adjust spacing on mobile */
-  }
+  .tabs-wrapper { gap: 1rem; padding: .5rem; }
+  .tab-container { min-width: 100px; padding: .3rem; }
+  .tab { padding: .8rem 1.2rem; font-size: .95rem; }
+  .cover-logo { height: 120px; }
+  .typewriter { font-size: 2rem; letter-spacing: .1em; }
 }
+
+/* ===================================================== */
+/* === JUPYTER BOOK OVERRIDES: HIDE WIDGETS & SIDEBAR === */
+/* ===================================================== */
+
+.headerbtn,
+button.theme-switch,
+button#navbar-icon,
+div.header-article__buttons,
+div.sidebar-toggle,
+nav.bd-header-nav,
+.bd-sidebar-secondary {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.bd-main {
+  grid-template-columns: 100% !important;
+}
+
 </style>
 <script>
-// === Improved Cursor Magic with Longer, Smoother Trailing Sparkles ===
+// === Sparkling Cursor ===
 const cursor = document.querySelector('.magic-cursor');
 const sparkles = [];
-let lastMouseX = 0;
-let lastMouseY = 0;
 
 document.addEventListener('mousemove', e => {
-  const currentX = e.clientX;
-  const currentY = e.clientY;
-  
-  // Update cursor position
-  cursor.style.left = currentX + 'px';
-  cursor.style.top = currentY + 'px';
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
 
-  // Create a sparkle at the current position
-  const sparkle = document.createElement('div');
-  sparkle.className = 'magic-sparkle';
-  sparkle.style.left = currentX + 'px';
-  sparkle.style.top = currentY + 'px';
-  document.body.appendChild(sparkle);
-  sparkles.push(sparkle);
+  const sp = document.createElement('div');
+  sp.className = 'magic-sparkle';
+  sp.style.left = e.clientX + 'px';
+  sp.style.top = e.clientY + 'px';
+  document.body.appendChild(sp);
+  sparkles.push(sp);
 
-  // Limit to 50 sparkles for a longer trail (increased from 30)
-  if (sparkles.length > 50) {
-    const old = sparkles.shift();
-    old.remove();
-  }
+  if (sparkles.length > 50) sparkles.shift().remove();
 
-  // Animate each sparkle: fade out over 800ms (longer duration) with random drift and scale
   setTimeout(() => {
-    if (sparkle.parentNode) {
-      sparkle.style.opacity = '0';
-      const driftX = (Math.random() - 0.5) * 40; // Wider random drift for more dynamic trail
-      const driftY = (Math.random() - 0.5) * 40;
-      const scale = Math.random() * 1.5 + 0.5; // Random scale for variety
-      sparkle.style.transform = `translate(${driftX}px, ${driftY}px) scale(${scale})`;
-    }
-  }, 100); // Slight delay before starting fade for better visibility
-
-  // Update last position for potential velocity-based effects (future-proof)
-  lastMouseX = currentX;
-  lastMouseY = currentY;
-});
-
-// Optional: Add sparkle creation on mouse down for extra magic
-document.addEventListener('mousedown', e => {
-  for (let i = 0; i < 5; i++) { // Burst of 5 sparkles on click
-    setTimeout(() => {
-      const sparkle = document.createElement('div');
-      sparkle.className = 'magic-sparkle';
-      sparkle.style.left = e.clientX + (Math.random() - 0.5) * 20 + 'px';
-      sparkle.style.top = e.clientY + (Math.random() - 0.5) * 20 + 'px';
-      document.body.appendChild(sparkle);
-      sparkles.push(sparkle);
-
-      if (sparkles.length > 50) {
-        const old = sparkles.shift();
-        old.remove();
-      }
-
-      setTimeout(() => {
-        if (sparkle.parentNode) {
-          sparkle.style.opacity = '0';
-          const driftX = (Math.random() - 0.5) * 30;
-          const driftY = (Math.random() - 0.5) * 30;
-          sparkle.style.transform = `translate(${driftX}px, ${driftY}px)`;
-        }
-      }, 200);
-    }, i * 50);
-  }
+    sp.style.opacity = '0';
+    const dx = (Math.random() - 0.5) * 40;
+    const dy = (Math.random() - 0.5) * 40;
+    sp.style.transform = `translate(${dx}px, ${dy}px) scale(${Math.random()*1.5+0.5})`;
+  }, 100);
 });
 </script>
 </body>
