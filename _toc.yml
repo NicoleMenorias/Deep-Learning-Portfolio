@@ -11,5 +11,6 @@ parts:
       - glob: Laboratories/laboratory*
   - caption: Section 3
     chapters:
-      - file: Projects/intro
-      - glob: Projects/project*
+      - file: Project/intro
+      - file: Project/Phase 1
+      - file: Project/Narrative Report 1

@@ -1,8 +1,22 @@
-# **Project: Coming Soon**
+# **Project**
 
 <p align="justify">
-In this section, we focus on applying deep learning to solve real-world problems through hands-on projects.
+In this section, you will explore hands-on deep learning projects that tackle real-world problems through applied coding and experiments.
 </p>
+
+<div class="gallery-section">
+
+  <a class="gallery-card" href="../Project/Phase 1.html">
+    <h3>Phase 1</h3>
+    <p>Submit project proposal</p>
+  </a>
+
+  <a class="gallery-card" href="../Project/Narrative Report 1.html">
+    <h3>Narrative Report</h3>
+    <p>Phase 1: Nov 10 - 16</p>
+  </a>
+
+</div>
 
 ---
 

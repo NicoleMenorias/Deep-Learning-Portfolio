@@ -178,7 +178,7 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
   border-radius: 15px;
   font-weight: 600;
   transition: all 0.35s ease;
-  color: #ffffff;
+  color: #ffffff !important;  /* Ensures tab text is white */
   background-color: transparent;
   border: none;
   font-size: 1rem;
@@ -195,6 +195,12 @@ body, .bd-article-container, .cover, .tabs-wrapper, .tab-container {
               inset 0 1px 0 rgba(255,255,255,0.05),
               inset 0 -2px 4px rgba(0,0,0,0.4);
   transform: translateY(-2px);
+}
+
+/* === Force All Links White (Overrides Browser Defaults) === */
+a, a:link, a:visited, a:hover, a:active {
+  color: #ffffff !important;
+  text-decoration: none !important;  /* Optional: Removes underlines for a cleaner look */
 }
 
 /* === Magic Dust === */
