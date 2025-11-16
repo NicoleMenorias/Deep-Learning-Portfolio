@@ -1,40 +1,39 @@
-# **🧪 Laboratory Experiments**
+# **Laboratory**
 
-<p align="center">
-Hands-on coding sessions and applied data experiments.  
-Click a laboratory card below to explore each interactive notebook.
+<p align="justify">
+In this section you will find hands-on coding tasks and applied data experiments.  
 </p>
 
 <div class="gallery-section">
 
   <a class="gallery-card" href="../Laboratories/laboratory1.html">
-    <h3>Laboratory 1</h3>
-    <p>Exploring Data Fundamentals</p>
+    <h3>Laboratory Task 1</h3>
+    <p>Four Types of Data Analytics</p>
   </a>
 
   <a class="gallery-card" href="../Laboratories/laboratory2.html">
-    <h3>Laboratory 2</h3>
-    <p>Data Visualization and Insights</p>
+    <h3>Laboratory Task 2</h3>
+    <p>Single Forward Pass</p>
   </a>
 
   <a class="gallery-card" href="../Laboratories/laboratory3.html">
-    <h3>Laboratory 3</h3>
-    <p>Regression Analysis and Forecasting</p>
+    <h3>Laboratory Task 3</h3>
+    <p>Forward and Backward Propagation</p>
   </a>
 
   <a class="gallery-card" href="../Laboratories/laboratory4.html">
-    <h3>Laboratory 4</h3>
-    <p>Time Series Modeling</p>
+    <h3>Laboratory Task 4</h3>
+    <p>Train a Linear Regression Model</p>
   </a>
 
   <a class="gallery-card" href="../Laboratories/laboratory5.html">
     <h3>Laboratory 5</h3>
-    <p>Deep Learning Fundamentals</p>
+    <p>PyTorch Basics</p>
   </a>
 
   <a class="gallery-card" href="../Laboratories/laboratory6.html">
     <h3>Laboratory 6</h3>
-    <p>Model Evaluation and Deployment</p>
+    <p>CNN Architecture Implementation</p>
   </a>
 
 </div>
@@ -42,7 +41,15 @@ Click a laboratory card below to explore each interactive notebook.
 ---
 
 <style>
-/* === Page Background (matches uploaded color) === */
+/* === Import Poppins Font === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* === Apply Font Globally === */
+body, h1, h2, h3, p, a {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+/* === Page Background === */
 body, .bd-article-container {
   background-color: #121212 !important; /* deep dark gray-black */
   color: #e0e0e0 !important;

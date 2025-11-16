@@ -1,15 +1,15 @@
-# **🧪 Lecture**
+# **Lecture**
 
-<p align="center">
-Hands-on coding sessions and applied data experiments.  
-Click a laboratory card below to explore each interactive notebook.
+<p align="justify">
+This section features activities focused on the core lectures of Deep Learning — bridging theoretical concepts with real-world understanding.
 </p>
 
 <div class="gallery-section">
 
   <a class="gallery-card" href="../Lectures/lecture1.html">
-    <h3>Laboratory 1</h3>
-    <p>Exploring Data Fundamentals</p>
+    <h3>Lecture Task 1</h3>
+    <p>Machine Learning:  <br>
+    Living in the Age of AI | A WIRED Film</p>
   </a>
 
 </div>
@@ -17,6 +17,14 @@ Click a laboratory card below to explore each interactive notebook.
 ---
 
 <style>
+/* === Import Poppins Font === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* === Apply Font Globally === */
+body, h1, h2, h3, p, a {
+  font-family: 'Poppins', sans-serif !important;
+}
+
 /* === Page Background (matches uploaded color) === */
 body, .bd-article-container {
   background-color: #121212 !important; /* deep dark gray-black */
