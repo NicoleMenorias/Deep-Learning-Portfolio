@@ -16,6 +16,16 @@ In this section, you will explore hands-on deep learning projects that tackle re
     <p>Phase 1: Nov 10 - 16</p>
   </a>
 
+  <a class="gallery-card" href="../Project/Phase 2.html">
+    <h3>Phase 1</h3>
+    <p>Data Collection and Preprocessing</p>
+  </a>
+
+  <a class="gallery-card" href="../Project/Narrative Report 2.html">
+    <h3>Narrative Report</h3>
+    <p>Phase 2: Nov 17 - 23</p>
+  </a>
+
 </div>
 
 ---
