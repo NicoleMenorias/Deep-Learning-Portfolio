@@ -14,3 +14,5 @@ parts:
       - file: Project/intro
       - file: Project/Phase 1
       - file: Project/Narrative Report 1
+      - file: Project/Phase 2
+      - file: Project/Narrative Report 2
