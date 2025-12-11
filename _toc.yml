@@ -12,4 +12,5 @@ parts:
   - caption: Section 3
     chapters:
       - file: Project/intro
+      - file: Project/EDA_Pulmoscope
       - file: Project/PulmoScope

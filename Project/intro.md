@@ -6,6 +6,11 @@ In this section, you will explore hands-on deep learning projects that tackle re
 
 <div class="gallery-section">
 
+  <a class="gallery-card" href="../Project/EDA_Pulmoscope.html">
+    <h3>Exploratory Data Analysis</h3>
+    <p>Analyzing Lung Sounds</p>
+  </a>
+
   <a class="gallery-card" href="../Project/PulmoScope.html">
     <h3>Implementation</h3>
     <p>Code and Results</p>
