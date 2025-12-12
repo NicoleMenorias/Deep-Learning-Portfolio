@@ -1,19 +1,19 @@
-# **Project**
+# **Project PulmoScope**
 
 <p align="justify">
-In this section, you will explore hands-on deep learning projects that tackle real-world problems through applied coding and experiments.
+In this section, you will explore <b>PulmoScope</b>, a deep learning initiative designed to address the critical challenge of misdiagnosing respiratory diseases in resource-limited settings[cite: 1, 18]. This project conducts a comparative analysis of temporal deep learning models—including LSTM and Pure TCN—against a hybrid neuromorphic TCN-SNN architecture. The study demonstrates that the TCN-SNN model achieves a 93% overall accuracy and a remarkable 97% sensitivity for Pneumonia detection, effectively functioning as a clinical gold standard for robust, noise-resistant diagnosis[cite: 630, 635, 742].
 </p>
 
 <div class="gallery-section">
 
   <a class="gallery-card" href="../Project/EDA_Pulmoscope.html">
     <h3>Exploratory Data Analysis</h3>
-    <p>Analyzing Lung Sounds</p>
+    <p>Investigating spectral signatures of COPD and Pneumonia </p>
   </a>
 
   <a class="gallery-card" href="../Project/PulmoScope.html">
-    <h3>Implementation</h3>
-    <p>Code and Results</p>
+    <h3>Model Implementation</h3>
+    <p>Deploying TCN-SNN and Grad-CAM for robust classification </p>
   </a>
 
 
