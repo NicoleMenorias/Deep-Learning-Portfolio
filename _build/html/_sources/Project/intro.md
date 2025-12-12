@@ -1,21 +1,25 @@
 # **Project PulmoScope**
 
 <p align="justify">
-In this section, you will explore <b>PulmoScope</b>, a deep learning initiative designed to address the critical challenge of misdiagnosing respiratory diseases in resource-limited settings[cite: 1, 18]. This project conducts a comparative analysis of temporal deep learning models—including LSTM and Pure TCN—against a hybrid neuromorphic TCN-SNN architecture. The study demonstrates that the TCN-SNN model achieves a 93% overall accuracy and a remarkable 97% sensitivity for Pneumonia detection, effectively functioning as a clinical gold standard for robust, noise-resistant diagnosis[cite: 630, 635, 742].
+In this section, you will explore <b>PulmoScope</b>, a deep learning initiative designed to address the critical challenge of misdiagnosing respiratory diseases in resource-limited settings. This project conducts a comparative analysis of temporal deep learning models—including LSTM and Pure TCN—against a hybrid neuromorphic TCN-SNN architecture[cite: 1, 194]. The study demonstrates that the TCN-SNN model achieves a 93% overall accuracy and a remarkable 97% sensitivity for Pneumonia detection, effectively functioning as a clinical gold standard for robust, noise-resistant diagnosis.
 </p>
 
 <div class="gallery-section">
 
   <a class="gallery-card" href="../Project/EDA_Pulmoscope.html">
     <h3>Exploratory Data Analysis</h3>
-    <p>Investigating spectral signatures of COPD and Pneumonia </p>
+    <p>Investigating spectral signatures of COPD and Pneumonia</p>
   </a>
 
   <a class="gallery-card" href="../Project/PulmoScope.html">
     <h3>Model Implementation</h3>
-    <p>Deploying TCN-SNN and Grad-CAM for robust classification </p>
+    <p>Deploying TCN-SNN and Grad-CAM for robust classification</p>
   </a>
 
+  <a class="gallery-card" href="https://pulmoscope.streamlit.app/" target="_blank">
+    <h3>Live Application</h3>
+    <p>Interact with the deployed PulmoScope Model</p>
+  </a>
 
 </div>
 
@@ -43,10 +47,10 @@ body, .bd-article-container {
   padding: 0 2.5rem !important;
 }
 
-/* === Gallery Grid (2 per row) === */
+/* === Gallery Grid (Now 3 per row for desktop, responsive) === */
 .gallery-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive Grid */
   gap: 2.5rem;
   margin-top: 3rem;
   justify-content: center;
@@ -106,11 +110,6 @@ h1, h2, h3 {
 
 /* === Responsive === */
 @media (max-width: 900px) {
-  .gallery-section {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
   .bd-article-container {
     max-width: 100% !important;
     padding: 0 1.5rem !important;
